@@ -12,38 +12,36 @@ class HKMUCoffeeSystem:
         self.current_user = None          
         self.current_cart = None           
         self.orders = []                  
-
-    def user_login(self):
-        print("\n===== 👋 Welcome to HKMUcoffee Ordering System =====")
+    
+    def _get_valid_input(self, prompt, length=None, is_digit=True):
         while True:
-            print("\nPlease select your identity:")
-            print("1. HKMU Student (8-digit student ID required)")
-            print("2. HKMU Teacher")
-            print("3. Non-campus User")
-            choice = input("Enter your choice (1/2/3): ")
-            if choice not in ["1", "2", "3"]:
-                print("❌ Invalid input! Please enter 1, 2 or 3.")
+            val = input(prompt)
+            if is_digit and not val.isdigit():
+                print("❌ Input must be digits only!")
                 continue
-            while True:
-                phone = input("Enter your 8-digit mobile phone number: ")
-                if phone.isdigit() and len(phone) == 8:
-                    break
-                print("❌ Invalid phone number! Must be 8 digits (no letters/symbols). Please try again.")
-            if choice == "1":
-                while True:
-                    student_id = input("Enter your 8-digit HKMU student ID: ")
-                    if student_id.isdigit() and len(student_id) == 8:
-                        break
-                    print("❌ Invalid student ID! Must be 8 digits (no letters/symbols). Please try again.")
-                self.current_user = Student(phone, student_id)
-            elif choice == "2":
-                teacher_id = input("Enter your HKMU teacher ID: ")
-                self.current_user = Teacher(phone, teacher_id)
-            else:
-                self.current_user = NormalUser(phone)
-            self.current_cart = Cart(self.current_user, self.menu)
-            print(f"\n✅ Login successful! {self.current_user.__class__.__name__} | Phone: {phone} | Current Balance: ${self.current_user.get_balance():.2f}")
-            break
+            if length and len(val) != length:
+                print(f"❌ Input must be {length} digits!")
+                continue
+            return val
+    
+    def user_login(self):
+        """重构后的登录：逻辑清晰，不再有长串嵌套"""
+        print("\n===== 👋 Welcome =====")
+        choice = input("Select Identity (1.Student / 2.Teacher / 3.Normal): ")
+        
+        phone = self._get_valid_input("Enter 8-digit phone: ", length=8)
+
+        if choice == "1":
+            sid = self._get_valid_input("Enter 8-digit Student ID: ", length=8)
+            self.current_user = Student(phone, sid)
+        elif choice == "2":
+            tid = input("Enter Teacher ID: ")
+            self.current_user = Teacher(phone, tid)
+        else:
+            self.current_user = NormalUser(phone)
+            
+        self.current_cart = Cart(self.current_user, self.menu)
+        print(f"✅ Login Success!")
 
     def cart_operation(self):
         while True:
@@ -158,4 +156,5 @@ class HKMUCoffeeSystem:
 if __name__ == "__main__":
     coffee_system = HKMUCoffeeSystem()
     coffee_system.run()
+
 
