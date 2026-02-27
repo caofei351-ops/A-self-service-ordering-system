@@ -1,12 +1,13 @@
 from base_classes import User
 
 class Student(User):
+    DISCOUNT_RATE = 0.9
     def __init__(self, phone, student_id):
         super().__init__(phone)
         self.student_id = student_id
 
     def get_discount(self):
-        return 0.9  
+        return self.DISCOUNT_RATE
 
     def recharge(self, amount):
         if amount >= 0:
@@ -22,7 +23,7 @@ class Teacher(User):
         self.teacher_id = teacher_id 
 
     def get_discount(self):
-        return 0.9
+        return self.DISCOUNT_RATE
 
     def recharge(self, amount):
         if amount >= 0:
@@ -38,3 +39,4 @@ class NormalUser(User):
 
     def recharge(self, amount):
         print("Non-students do not need to recharge. Just pay directly when checking out!")
+
