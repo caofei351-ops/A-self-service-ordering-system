@@ -3,11 +3,13 @@
 Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
 
 ## 👀:Contents
-
+- [How did this idea come about?](#idea)
 - [The usage of the OOP concepts](#function)
+- [What problems can be solved?](#problem)
 - [Update](#update)
 - [Contact](#contact)
-
+- [Non-Commercial Use Only Declaration](#x)
+## <a name="idea"></a>🧠:How did this idea come about?
 
 ## <a name="function"></a>🤔: The usage of the OOP concepts
 1➡️ **Abstraction** hides complex implementation details and exposes only essential features (via abstract classes/methods).
@@ -104,8 +106,10 @@ The cart (Cart.calculate_total()) uses user.get_discount():
 ```
 - Order has-a copy of Cart details (uses copy.deepcopy to preserve order history):
 ```shell
-    self.cart_detail: List[Tuple[Dish, int]] = copy.deepcopy(cart.selected_dishes)  
+    self.cart_detail: List[Tuple[Dish, int]] = copy.deepcopy(cart.selected_dishes)
 ```
+
+## <a name="problem"></a>🦯:What problems can be solved?
 
 ## <a name="update"></a>Update
 - **2026.01.29**: We form our group and study what is Github and how to use it.
@@ -115,4 +119,7 @@ The cart (Cart.calculate_total()) uses user.get_discount():
 - **2026.02.17**:CaoFei finishs the major code for task1.
   
 ## <a name="contact"></a>💙:Contact
-If you have any questions about our project, please email us with `s1375580@live.hkmu.edu.hk`,`s1375239@live.hkmu.edu.hk`, s1379542@live.hkmu.edu.hk
+If you have any questions about our project, please email us with `s1375580@live.hkmu.edu.hk`,`s1375239@live.hkmu.edu.hk`
+
+## <a name="x"></a>Non-Commercial Use Only Declaration
+
