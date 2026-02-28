@@ -152,7 +152,7 @@ The cafeteria previously recorded dish information and order records with paper 
 • Lists: Store all dish objects and cart-selected dish objects for fast sequential traversal, category sorting (e.g. filtering Main Course/Drink via get_type()) and dynamic addition/removal of elements—ideal for scenarios requiring ordered, modifiable data sets.
 
 • Dictionaries: Map unique order IDs to detailed order objects (user info, dish list, total amount) and store user account information (ID → user object) for O(1) fast query and key-value matching—perfect for scenarios requiring quick data lookup by a unique identifier.
-This standardized data management method ensures data security and easy operation, and also lays a solid foundation for integrating more complex data structures (e.g., binary search trees for fast dish search, heaps for sales data sorting) in Task 2 of the project.
+This standardized data management method ensures data security and easy operation, and also lays a solid foundation for integrating more complex data structures (e.g. binary search trees for fast dish search, heaps for sales data sorting) in Task 2 of the project.
 
 8➡️ Unregulated user balance and sales data tracking
 
