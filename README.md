@@ -127,7 +127,7 @@ Campus cafeterias have long lines during lunch and dinner breaks, making student
 
 2➡️ Frequent human errors in manual order-taking
 
-Cashiers often mix up dish flavors, portions or user customization requirements (e.g., serving spicy Mapo Tofu Rice to non-spicy eaters) when taking orders by hand. The system lets users select dishes and set requirements independently, with all order information recorded digitally and no manual intervention, ensuring 100% order accuracy and reducing service disputes from wrong orders.
+Cashiers often mix up dish flavors, portions or user customization requirements (e.g. serving spicy Mapo Tofu Rice to non-spicy eaters) when taking orders by hand. The system lets users select dishes and set requirements independently, with all order information recorded digitally and no manual intervention, ensuring 100% order accuracy and reducing service disputes from wrong orders.
 
 3➡️ Lack of transparent order tracking for both sides
 
@@ -143,13 +143,13 @@ Cafeteria operators only judge popular dishes by daily experience, with no speci
 
 6➡️ Difficult expansion of traditional manual dining systems
 
-To add new dish categories (e.g., breakfast sets, desserts) or user benefits, traditional manual systems require re-training all cashiers and adjusting the entire order-taking process, which is time-consuming and labor-intensive. Our modular OOP design allows adding new functions only by creating new subclasses (e.g., a BreakfastSet class inheriting from the base Dish class) without modifying any core system code, making system expansion simple and fast.
+To add new dish categories (e.g. breakfast sets, desserts) or user benefits, traditional manual systems require re-training all cashiers and adjusting the entire order-taking process, which is time-consuming and labor-intensive. Our modular OOP design allows adding new functions only by creating new subclasses (e.g. a BreakfastSet class inheriting from the base Dish class) without modifying any core system code, making system expansion simple and fast.
 
 7➡️ Disorganized dish and order data management (core data structure application)
 
 The cafeteria previously recorded dish information and order records with paper lists and Excel spreadsheets—these are easy to lose, and hard to query or modify quickly. Our project uses Python built-in lists and dictionaries as the core basic data structures for unified, efficient data management, with clear division of usage to match business needs:
 
-• Lists: Store all dish objects and cart-selected dish objects for fast sequential traversal, category sorting (e.g., filtering Main Course/Drink via get_type()) and dynamic addition/removal of elements—ideal for scenarios requiring ordered, modifiable data sets.
+• Lists: Store all dish objects and cart-selected dish objects for fast sequential traversal, category sorting (e.g. filtering Main Course/Drink via get_type()) and dynamic addition/removal of elements—ideal for scenarios requiring ordered, modifiable data sets.
 
 • Dictionaries: Map unique order IDs to detailed order objects (user info, dish list, total amount) and store user account information (ID → user object) for O(1) fast query and key-value matching—perfect for scenarios requiring quick data lookup by a unique identifier.
 This standardized data management method ensures data security and easy operation, and also lays a solid foundation for integrating more complex data structures (e.g., binary search trees for fast dish search, heaps for sales data sorting) in Task 2 of the project.
