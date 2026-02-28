@@ -171,4 +171,11 @@ Manual recording of user meal balances and cafeteria sales data is easy to have 
 If you have any questions about our project, please email us with `s1375580@live.hkmu.edu.hk`,`s1375239@live.hkmu.edu.hk`,`s1379542@live.hkmu.edu.hk`.
 
 ## <a name="x"></a>Non-Commercial Use Only Declaration
+This project, A-self-service-ordering-system, is developed exclusively for educational purposes as part of the coursework for COMP2090SEF/S209W/COMP8090SEF at Hong Kong Metropolitan University (HKMU).
+
+1➡️	No Commercial Use: The software, source code and associated documentation may not be used, sold or distributed for any commercial, for-profit or revenue-generating purposes.
+
+2➡️Attribution: Any use or modification of this work must retain the original team authorship and this non-commercial declaration.
+
+3➡️No Warranty: The software is provided "as is" without any express or implied warranties; the team accepts no liability for any damages arising from the use of this system.
 
