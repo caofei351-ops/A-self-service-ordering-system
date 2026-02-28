@@ -11,6 +11,7 @@ Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
 - [Non-Commercial Use Only Declaration](#x)
 ## <a name="idea"></a>🧠:How did this idea come about?
 This self-service ordering system is made to fix the common problems we face in daily campus life:
+
 1➡️The cafeteria always has long lines during peak time, and it’s a big waste of time for both students and staff.
 
 2➡️Cashiers often make mistakes when taking orders by hand, such as mixing up orders or giving wrong dishes, and the service is always slow because of these errors.
