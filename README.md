@@ -166,6 +166,7 @@ Manual recording of user meal balances and cafeteria sales data is easy to have 
 - **2026.02.06**:The specific division of labor for Task 1 has been determined.
 - **2026.02.17**:CaoFei finishs the major code for task1.
 - **2026.02.27**:Pan Hao Wen polished the code for task1.
+- **2026.02.28**:Xin Yue Ying polished the code for task1.
   
 ## <a name="contact"></a>💙:Contact
 If you have any questions about our project, please email us with `s1375580@live.hkmu.edu.hk`,`s1375239@live.hkmu.edu.hk`,`s1379542@live.hkmu.edu.hk`.
