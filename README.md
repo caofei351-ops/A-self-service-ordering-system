@@ -189,19 +189,19 @@ A* is a smart pathfinding algorithm that finds the shortest route between two po
 
 3. To execute the data structure demonstration, run:
 ```bash
-python 文件名.py
+python filename.py
 ```
 
 4. To execute the algorithm demonstration, run:
 ```bash
-python 文件名.py
+python filename.py
 ```
 
 ## <a name = "user guide"></a>🎥:Project Demonstration 
-[到时候放视频的链接]
+[the link to the video]
  
 ## <a name = "references"></a>📚:References 
-(写用到的文献)
+(the literatures to be used)
 
 
 ## <a name="update"></a>🕵️:Update
