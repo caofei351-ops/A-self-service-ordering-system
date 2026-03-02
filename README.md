@@ -1,14 +1,11 @@
-## COMP2090SEF_course_project-task1
-
+## COMP2090SEF_course_project
+This repository contains[task1](#i) and [task2](#o).
 Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
-
+## <a name="i"></a>🐡:task1
 ## 👀:Contents
 - [How did this idea come about?](#idea)
 - [The usage of the OOP concepts](#function)
 - [What problems can be solved?](#problem)
-- [Update](#update)
-- [Contact](#contact)
-- [Non-Commercial Use Only Declaration](#x)
 ## <a name="idea"></a>🧠:How did this idea come about?
 This self-service ordering system is made to fix the common problems we face in daily campus life:
 
@@ -157,6 +154,8 @@ This standardized data management method ensures data security and easy operatio
 8➡️ Unregulated user balance and sales data tracking
 
 Manual recording of user meal balances and cafeteria sales data is easy to have typos and data inconsistencies. The system encapsulates balance management in user classes (with negative recharge validation) and uses a singleton SalesRecord class to track global sales data—both relying on Python numeric types and basic data structures for real-time, accurate data update and storage, ensuring data integrity and consistency across the entire system.
+
+## <a name="o"></a>🐡:task2
 
 
 ## <a name="update"></a>🕵️:Update
