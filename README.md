@@ -19,6 +19,9 @@ Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
 3. To execute the self-service ordering system, run:
 ```bash
 python task1/main-system.py
+```
+
+
 
 ## <a name = "video1"></a>🎥:Project Demonstration
 
@@ -42,7 +45,7 @@ We want to build a simple and practical system based on OOP knowledge to automat
     from abc import ABC, abstractmethod
     class Dish(ABC):
         def __init__(self, name, student_price, teacher_price, normal_price):
-            self.name = name          
+            self.name = name
             self.student_price = student_price  
             self.teacher_price = teacher_price  
             self.normal_price = normal_price   
