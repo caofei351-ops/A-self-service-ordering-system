@@ -8,6 +8,16 @@ Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
 - [How did this idea come about?](#idea)
 - [The usage of the OOP concepts](#function)
 - [What problems can be solved?](#problem)
+- [User Guide](#guide)
+- [Video](#video)
+
+
+## <a name = "guide"></a>🚀:User Guide
+
+
+## <a name = "user guide"></a>🎥:Project Demonstration
+
+- 
 ## <a name="idea"></a>🧠:How did this idea come about?
 This self-service ordering system is designed to address the common problems we face in daily campus life:
 
