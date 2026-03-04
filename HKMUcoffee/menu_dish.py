@@ -5,9 +5,7 @@ class Dish:
         self.normal_price = normal_price
 
     def get_type(self):
-        
-        raise NotImplementedError
-from base_classes import Dish
+        raise NotImplementedError("Subclasses must implement get_type")
 
 class MainCourse(Dish):
     def get_type(self):
@@ -32,13 +30,14 @@ class Menu:
             print("Add failed: Not a valid Dish object!")
 
     def show_menu(self):
-        print("\n===== 📋 HKMUcoffee Menu =====")
+        print("\n=== HKMUcoffee Menu ===")
         dish_types = ["Main Course", "Snack", "Drink"]
         type_titles = {"Main Course":"[all day Breakfast & hot dishes]",
                        "Snack":"[Hot Sandwiches]",
                        "Drink":"[PREMIUM COFFEE]"}
+        
         for t in dish_types:
-            print(f"\n【{t}】")
+            print(f"\n{t} {type_titles[t]}")
             type_dishes = [d for d in self.dishes if d.get_type() == t]
             if not type_dishes:
                 print("  No dishes available")
@@ -49,11 +48,14 @@ class Menu:
                 print(f"  {idx:<4}. {dish.name:<35} ${dish.student_price:<14} ${dish.normal_price:<10}")
 
     def get_dish_by_index(self, idx):
-        if 0 <= idx < len(self.dishes):
-            return self.dishes[idx]
+        actual_idx = idx - 1
+        if 0 <= actual_idx < len(self.dishes):
+            return self.dishes[actual_idx]
         else:
             return None
-elf.add_dish(MainCourse("All-Day Breakfast", 54, 68))
+
+    def init_default_dishes(self):
+        self.add_dish(MainCourse("All-Day Breakfast", 54, 68))
         self.add_dish(MainCourse("Bolognese Pasta with Fried Egg Toast", 38, 45))
         self.add_dish(MainCourse("Custom 2-Topping Demae Ramen", 29, 36))
         self.add_dish(MainCourse("Custom 2-Topping Spicy Noodles", 34, 42))
@@ -90,12 +92,9 @@ elf.add_dish(MainCourse("All-Day Breakfast", 54, 68))
         self.add_dish(Drink("Espresso Shot", 5, 5))
         self.add_dish(Drink("Swap to Oat Milk", 5, 5))
         self.add_dish(Drink("Swap to Skim Milk", 0, 0))
+        
 if __name__ == "__main__":
-    hkmu_coffee_menu = Menu()
-
-hkmu_coffee_menu.init_default_dishes()
-    
-    hkmu_coffee_menu.show_menu()
-    
-hkmu_coffee_menu.show_student_price_ranking()
+    test_menu = Menu()
+    test_menu.init_default_dishes()
+    test_menu.show_menu()
 
