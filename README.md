@@ -161,7 +161,6 @@ Manual recording of user meal balances and cafeteria sales data is easy to have 
 - [How is the code specifically implemented?](#code)
 - [User Guide](#guide)
 - [Video](#video)
-- [References](#references)
 
 ## Data Structure 📊: Circular Buffer 
 
@@ -199,8 +198,6 @@ python filename.py
 ## <a name = "user guide"></a>🎥:Project Demonstration 
 [the link to the video]
  
-## <a name = "references"></a>📚:References 
-(the literatures to be used)
 
 
 ## <a name="update"></a>🕵️:Update
