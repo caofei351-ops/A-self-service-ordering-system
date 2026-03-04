@@ -1,10 +1,9 @@
 ## COMP2090SEF_course_project
 
-This repository contains [task1](#i) and [task2](#o).
-## Intrduction🗞️:
+This repository contains [task1](#i) and [task2](#o). (Click on the task you want to see)
 
-Task2 contains the source code, user guide, and video demonstration for Task 2 of the COMP2090SEF course project. The objective is to self-study a new data structure and a new algorithm that are not covered in the course.
 Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
+
 ## <a name="i"></a>🐡:task1 contents-(a self-service ordering system)
 - [How did this idea come about?](#idea)
 - [The usage of the OOP concepts](#function)
