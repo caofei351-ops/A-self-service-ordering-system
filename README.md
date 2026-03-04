@@ -9,15 +9,15 @@ Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
 - [The usage of the OOP concepts](#function)
 - [What problems can be solved?](#problem)
 ## <a name="idea"></a>🧠:How did this idea come about?
-This self-service ordering system is made to fix the common problems we face in daily campus life:
+This self-service ordering system is designed to address the common problems we face in daily campus life:
 
 1➡️The cafeteria always has long lines during peak times, and it’s a big waste of time for both students and staff.
 
 2➡️Cashiers often make mistakes when taking orders by hand, such as mixing up orders or giving wrong dishes, and the service is always slow due to these errors.
 
-3➡️There was no clear digital way to track orders before, so both students and cafeteria workers often feel confused and unhappy with the service.
+3➡️There was no clear digital way to track orders before, so both students and cafeteria workers often felt confused and unhappy with the service.
 
-We want to build a simple and practical system based on OOP knowledge to automate the ordering process, reduce human mistakes, and allow everyone to easily the order progress. The system is designed to be modular scalable, and easy to maintain, which aligns with the software design principles we learned in class.
+We want to build a simple and practical system based on OOP knowledge to automate the ordering process, reduce human mistakes, and allow everyone to easily the order progress. The system is designed to be modular, scalable, and easy to maintain, which aligns with the software design principles we learned in class.
 ## <a name="function"></a>🤔: The usage of the OOP concepts
 1➡️ **Abstraction** hides complex implementation details and exposes only essential features (via abstract classes/methods).
 - Dish and User in base_classes,py are abstract classes with @abstractmethod(These methods define a "contract" (required behavior) for subclasses but do not implement logic themselves.).
