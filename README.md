@@ -135,45 +135,35 @@ The cart (Cart.calculate_total()) uses user.get_discount():
 ```
 
 ## <a name="problem"></a>🦯:What problems can be solved?
-
-This self-service ordering system effectively resolves key inefficiencies in traditional campus cafeteria dining with practical real-life solutions, and adopts Python built-in basic data structures for standardized, efficient data management—laying a foundation for functional stability and subsequent expansion with complex data structures in Task 2, fully meeting the course’s problem definition and technical design requirements:
+The self-service Order system has successfully addressed several issues present in the old college Canteen System and offered practical implementations. Adopting Python's standard data types helps organise precise information at this stage that will be maintained after some time. This also fulfils all aspects as specified by our teacher in terms of the requirements outlined at Task 2:
 
 1➡️Long waiting queues in peak hours
+Long queues at the campus cafeteria during meal times, wasting about 10 to 20 minutes of everyone's time every day. There is also a system user interface that allows users to reserve in advance, via smartphones or computers; after the user books their own ordered food from other schools' canteens.
 
-Campus cafeterias have long lines during lunch and dinner breaks, making students and teachers waste 10–20 minutes waiting for meals daily. The system supports terminal-based pre-ordering; users can place orders in classrooms or dormitories in advance and pick up prepared meals directly at the cafeteria, completely avoiding queuing and saving precious study and work time.
+2➡️Frequent human errors in manual order-taking
+Cashiers frequently mislabel dishes with respect to the flavours, portion sizes and customisations requested by users (e.g., providing hot pot soup without any seasonings for a spice-follower). Users can enter the menu to select dishes and set their own conditions, and everything is entered in a digital form; there will be no mistakes or misunderstandings at all during operation.
 
-2➡️ Frequent human errors in manual order-taking
+3➡️Lack of transparent order tracking for both sides
+After manual order entry by user to obtain a menu selection, they will have their choices ignored until more meals are available for purchase. The system provides current order status (Pending/In progress/completed), which can be viewed by users; And display detailed content of the user and orders for management personnel to know all about this issue.
 
-Cashiers often mix up dish flavors, portions or user customization requirements (e.g. serving spicy Mapo Tofu Rice to non-spicy eaters) when taking orders by hand. The system lets users select dishes and set requirements independently, with all order information recorded digitally and no manual intervention, ensuring 100% order accuracy and reducing service disputes from wrong orders.
+4➡️Troublesome, error-prone discount application for different groups
+HKMU students and staff have a 10% dining concession; however, most clerks fail to issue the discount or miscount the total price at check-out time manually. At checkout, the system will determine whether it is a student, teacher or normal user by recognising the role; then apply discounts according to the current discount policy and calculate promptly for users.
 
-3➡️ Lack of transparent order tracking for both sides
+5➡️Cafeteria’s lack of sales data for operational optimization
+The cafeteria operator makes a decision based on their own observations without any evidence of sales. It leads to excess inventories of some goods and stockouts in others; as a result, considerable quantities of food are wasted due to improper handling. System's Sales record module can monitor the actual daily sales quantity and income of each dish to provide detailed information for restaurant managers to make reasonable Adjustments in terms of Menu structure and Inventory storage; Therefore, Reduce unnecessary purchases.
 
-After manual ordering, users wait blindly without knowing meal preparation progress, and cafeteria staff cannot confirm the owner of uncollected meals—causing unnecessary food waste. The system displays real-time order status (Pending/In Progress/Completed) for users, and shows detailed user and order information for staff, making the entire ordering and meal preparation process open and transparent.
+6➡️Difficult expansion of traditional manual dining systems
+Frequenting the cafeteria daily is insufficient to assess its popularity; sales figures are unavailable for reference. The reason for this is an excessive purchase of certain raw materials due to lack of planning when ordering less-needed items in advance. The System's SalesRecord module records the actual sales volume and income per day of all dishes to provide specific Data basis for managers to Adjust menu Structure or Ingredient Procurement volumes to reduce food Wastage.
 
-4➡️ Troublesome, error-prone discount application for different groups
+7➡️Disorganized dish and order data management (core data structure application)
+Before this, the canteen used paper menus and Excel to record dishes and orders; These ways are slow in query time and operation efficiency. According to the built-in list and dictionary functions provided by Python's database construction in this study, an obvious purpose was set to meet actual business application requirements:
 
-HKMU students and teachers are entitled to a 10% dining discount, but cashiers often forget to apply discounts or miscalculate final prices during manual checkout. The system automatically identifies user roles (student/teacher/normal user) at checkout, applies the corresponding discount rate in real time, and calculates the final payable amount instantly—eliminating human calculation errors and simplifying the payment process.
+	●Lists: Store all the dishes' objects and cart-selected dish's object for quick lookup; Category Sorts (Filter by category): Main Course/Drink etc., which is suitable for situations where ordered, modifiable data set requires use of a set.
 
-5➡️ Cafeteria’s lack of sales data for operational optimization
+	● Dictionaries: Associate each separate order number with a specific instance of the order class that contains user data, dish details, payment methods, etc.; Save users' accounts in an ID-to-user object dictionary form; Perform quick lookup operations under O(1) time complexity based on these attributes. The standardised Data management approach can improve the Safety of the database and facilitate System Maintenance; Additionally, It also provides a basis for building additional Structure such As Binary Search Trees in order to quickly Retrieve information or heaps Sales-Data organization.
 
-Cafeteria operators only judge popular dishes by daily experience, with no specific sales data support. This leads to over-purchasing of some ingredients and insufficient preparation of popular ones, causing serious food waste and low operational efficiency. The system’s SalesRecord module tracks real-time daily sales volume and revenue of each dish, providing concrete data for operators to adjust menus and ingredient purchase quantities—effectively reducing food waste and improving operational efficiency.
-
-6➡️ Difficult expansion of traditional manual dining systems
-
-To add new dish categories (e.g. breakfast sets, desserts) or user benefits, traditional manual systems require re-training all cashiers and adjusting the entire order-taking process, which is time-consuming and labor-intensive. Our modular OOP design allows adding new functions only by creating new subclasses (e.g. a BreakfastSet class inheriting from the base Dish class) without modifying any core system code, making system expansion simple and fast.
-
-7➡️ Disorganized dish and order data management (core data structure application)
-
-The cafeteria previously recorded dish information and order records with paper lists and Excel spreadsheets—these are easy to lose, and hard to query or modify quickly. Our project uses Python built-in lists and dictionaries as the core basic data structures for unified, efficient data management, with clear division of usage to match business needs:
-
-• Lists: Store all dish objects and cart-selected dish objects for fast sequential traversal, category sorting (e.g. filtering Main Course/Drink via get_type()) and dynamic addition/removal of elements—ideal for scenarios requiring ordered, modifiable data sets.
-
-• Dictionaries: Map unique order IDs to detailed order objects (user info, dish list, total amount) and store user account information (ID → user object) for O(1) fast query and key-value matching—perfect for scenarios requiring quick data lookup by a unique identifier.
-This standardized data management method ensures data security and easy operation, and also lays a solid foundation for integrating more complex data structures (e.g. binary search trees for fast dish search, heaps for sales data sorting) in Task 2 of the project.
-
-8➡️ Unregulated user balance and sales data tracking
-
-Manual recording of user meal balances and cafeteria sales data is easy to have typos and data inconsistencies. The system encapsulates balance management in user classes (with negative recharge validation) and uses a singleton SalesRecord class to track global sales data—both relying on Python numeric types and basic data structures for real-time, accurate data update and storage, ensuring data integrity and consistency across the entire system.
+8➡️Unregulated user balance and sales data tracking
+Manual record-keeping of users' meal balances and cafeteria's sales data is prone to errors due to typos, etc. The balance management function is included in the User class, with negative recharge checked; A SalesRecord single-instance Class was added to manage all-sale-related data at this time; Both use simple Data structures Types like Numeric Variables in Python to update and ensure the integrity of the data.
 
 
 
